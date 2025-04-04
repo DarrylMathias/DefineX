@@ -6,10 +6,8 @@ import { ColorModeProvider,  } from "./components/ui/color-mode.jsx";
 
 createRoot(document.getElementById("root")).render(
   <Provider>
-     <ColorModeProvider>
     <StrictMode>
       <App />
     </StrictMode>
-    </ColorModeProvider>
   </Provider>
 );
