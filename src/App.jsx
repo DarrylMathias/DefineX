@@ -1,6 +1,6 @@
 import { Container } from "@chakra-ui/react";
 import { Heading, Flex } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "./components/Hero";
 import { useState } from "react";
 import { Highlight } from "@chakra-ui/react";
@@ -29,7 +29,7 @@ function App() {
             {heading}
           </Highlight>
         </Heading>
-        <Hero></Hero>
+        <Hero heading = {setHeading}></Hero>
       </Container>
     </Container>
   );

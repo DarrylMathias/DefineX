@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Center, Container, Flex } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import Definitions from "./Definitions";
 import { useState } from "react";
 
-function Hero() {
+function Hero(props) {
   const [word, setWord] = useState("");
+
+  useEffect(() => {
+    if(word == '')
+      props.heading('Define X')
+    else
+      props.heading(word)
+  },[word])
 
   return (
     <Center>
